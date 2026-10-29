@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Infleet · Chat de treinamento</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --fg:#1d2330; --muted:#5d6676; --accent:#f26b1d; --line:#e3e6eb; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14171c; --card:#1d2128; --fg:#e8ebf0; --muted:#9aa3b2; --line:#2c323c; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 120px; }
+  .tag { display:inline-block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+  h1 { font-size: 28px; line-height:1.25; margin: 8px 0 12px; text-wrap: balance; }
+  p.lead { color: var(--muted); margin: 0 0 32px; }
+  section { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 24px; margin-bottom:16px; }
+  h2 { font-size:17px; margin:0 0 8px; }
+  ol, ul { margin:0; padding-left: 20px; }
+  li { margin: 4px 0; }
+  .warn { border-left: 4px solid var(--accent); }
+  footer { color: var(--muted); font-size: 13px; margin-top: 32px; }
+</style>
+</head>
+<body>
+<main>
+  <span class="tag">Ambiente de teste</span>
+  <h1>Chat de treinamento da Infleet no Cloud Chat</h1>
+  <p class="lead">Página só pra treinar o time antes da virada. Use o balão no canto da tela como se fosse um cliente, e responda pelo Cloud Chat como agente.</p>
+
+  <section class="warn">
+    <h2>Antes de começar</h2>
+    <p>Nada daqui chega a cliente de verdade. As conversas caem na caixa <strong>TESTE - Chat de treinamento</strong> e a caixa vai ser apagada depois do treinamento.</p>
+  </section>
+
+  <section>
+    <h2>Como testar em dupla</h2>
+    <ol>
+      <li>Uma pessoa abre esta página e faz o papel do cliente pelo balão do chat.</li>
+      <li>A outra entra no Cloud Chat, abre a caixa de teste e responde.</li>
+      <li>Usem os atalhos, transfiram entre times, coloquem etiquetas e encerrem a conversa.</li>
+      <li>Troquem de papel e repitam.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Ideias de cenário</h2>
+    <ul>
+      <li>Rastreador desconectado ou sem sinal.</li>
+      <li>Agendamento de instalação ou manutenção.</li>
+      <li>Dúvida de boleto ou segunda via.</li>
+      <li>Técnico parceiro pedindo suporte em campo.</li>
+    </ul>
+  </section>
+
+  <footer>Cloud Humans · ambiente de treinamento da migração Intercom → Cloud Chat</footer>
+</main>
+
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://cloudchat6.cloudhumans.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.cloudchatSDK.run({
+            websiteToken: 'y1x8N2bTqGoVijHESpYpkPAd',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+    
+</body>
+</html>
